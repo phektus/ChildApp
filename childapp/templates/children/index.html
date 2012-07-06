@@ -3,7 +3,7 @@
 {% block content %}
 <div class="page-header">
     <h1>Your Children</h1>
-    <a href="{% url childapp.apps.children.views.edit %}" class="btn primary">Add</a>
+    <a href="{% url childapp.apps.children.views.edit %}" class="btn btn-primary">Add</a>
     <br style="clear:both;">
 </div>
 <table class="table table-striped">
@@ -11,15 +11,17 @@
         <tr>
             <th>Name</th>
             <th>Gender</th>
+            <th>Birthday</th>
             <th></th>
         </tr>
     </thead>
     <tbody>
     {% for child in children %}
     <tr>
-        <td>{{ child.first_name }} {{ child.last_name }}</td>
+        <td><a href="{% url childapp.apps.children.views.edit id=child.id %}">{{ child.first_name }} {{ child.last_name }}</a></td>
         <td>{{ child.gender }}</td>
-        <th><a href="{% url childapp.apps.children.views.delete id=child.id %}">Delete</a></th>
+        <td>{{ child.birthday }}</td>
+        <th><a href="{% url childapp.apps.children.views.delete id=child.id %}" onclick="return confirm('Are you sure you want to delete {{ child.first_name }}?');">Delete</a></th>
     </tr>
     {% endfor %}
     </tbody>
