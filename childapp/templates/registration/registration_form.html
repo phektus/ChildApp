@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <h1>Register as a Merchant</h1>
+    <p>The surface is fine and powdery. I can kick it up loosely with my toe. It does adhere in fine layers, like powdered charcoal, to the sole and sides of my boots. </p>
+    <form class="well" method="post">{% csrf_token %}
+        {{ form }}
+        <button class="btn btn-primary" type="submit">Register</button>
+    </form>
+{% endblock content %}

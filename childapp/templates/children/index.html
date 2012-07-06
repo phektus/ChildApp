@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="page-header">
+    <h1>Your Children</h1>
+    <a href="{% url childapp.apps.children.views.edit %}" class="btn primary">Add</a>
+    <br style="clear:both;">
+</div>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Gender</th>
+        </tr>
+    </thead>
+    <tbody>
+    {% for child in children %}
+    <tr>
+        <td>{{ child.first_name }} {{ child.last_name }}</td>
+        <td>{{ child.gender }}</td>
+    </tr>
+    {% endfor %}
+    </tbody>
+</table>
+{% endblock content %}

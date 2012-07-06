@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <h1>Account Activation</h1>
+    <div class="alert alert-error">
+        <p>Activation failed due to invalid activation key:</p>
+        <p>
+            {{ activation_key }}
+        </p>
+        <p>Please make sure you have followed the right URL in your activation email and try again.</p>
+    </div>
+{% endblock content %}

@@ -1,0 +1,40 @@
+{% spaceless %}
+    {% load url from future %}
+    {% load activelink %}
+{% endspaceless %}<!DOCTYPE html>
+<html lang="en">
+<head>
+    {# <!-- http://www.caktusgroup.com/blog/2012/03/05/using-less-django/ --> #}
+    <link rel="stylesheet" type="text/css" media="all" href="{{ STATIC_URL }}css/bootstrap.css" />
+    <link rel="stylesheet" type="text/css" media="all" href="{{ STATIC_URL }}css/bootstrap-responsive.css" />
+    <link rel="stylesheet/less" type="text/css" media="all" href="{{ STATIC_URL }}less/style.less" />
+    <script src="{{ STATIC_URL }}js/less-1.3.0.min.js"></script>
+    <title>{% block title %}Children Profiles{% endblock title %}</title>
+</head>
+<body>
+    <div class="navbar">
+        <div class="navbar-inner">
+            <div class="container">
+                <a class="brand" href="/">Children Profiles</a>
+                <div class="nav-collapse">
+                    <ul class="nav">
+                        {% if user.is_authenticated %}
+                            <li{% ifactive '/store/' %} class="active"{% endifactive %}><a href="{% url 'childapp.apps.children.views.index' %}">My Children</a></li>
+                            <li{% ifactive '/accounts/logout/' %} class="active"{% endifactive %}><a href="{% url 'django.contrib.auth.views.logout' %}">Logout</a></li>
+                        {% else %}
+                            <li{% ifactive '/accounts/register/' %} class="active"{% endifactive %}><a href="{% url 'registration.views.register' %}">Register</a></li>
+                            <li{% ifactive '/accounts/login/' %} class="active"{% endifactive %}><a href="{% url 'django.contrib.auth.views.login' %}">Login</a></li>
+                        {% endif %}
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        {% block content %}{% endblock content %}
+        <footer class="footer">
+            <p>&copy; 2012 Arbie Samong for Skoolbo</p>
+        </footer>
+    </div>
+</body>
+</html>

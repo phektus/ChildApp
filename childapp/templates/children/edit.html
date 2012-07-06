@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <div class="page-header">
+        <h1>{% if is_new %}New{% else %}Edit{% endif %}</h1>
+        <br style="clear:both;">
+    </div>
+    <form action="" class="form-stacked" method="POST">
+        {% csrf_token %}
+        <fieldset>
+            {{ form }}
+        </fieldset>
+        <input type="submit" value="Submit" />
+    </form>
+
+{% endblock %}

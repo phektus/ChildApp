@@ -1,0 +1,7 @@
+*~
+*.pyc
+docs/_build/*
+uploads
+childapp/conf/local/*.py
+dev.db
+childapp.egg-info

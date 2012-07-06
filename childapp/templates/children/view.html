@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="page-header">
+    <h1>Your Children</h1>
+    <a href="{% url childapp.apps.children.views.edit %}" class="btn primary">Add</a>
+    <br style="clear:both;">
+</div>
+<table class="table table-striped">
+    <tbody>
+    <tr>
+        <th>First Name</th>
+        <td>{{ child.first_name }}</td>
+    </tr>
+    <tr>
+        <th>Last Name</th>
+        <td>{{ child.last_name }}</td>
+    </tr>
+    <tr>
+        <th>Gender</th>
+        <td>{{ child.gender }}</td>
+    </tr>
+    <tr>
+        <th>Birthday</th>
+        <td>{{ child.birthday }}</td>
+    </tr>
+    </tbody>
+</table>
+{% endblock content %}
