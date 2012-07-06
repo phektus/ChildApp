@@ -1,0 +1,9 @@
+Child profile app
+
+installing on local:
+* create virtualenv
+* cd to project directory
+* pip install -r requirements.pip
+* pip install -e .
+* manage.py syncdb --migrate
+* manage.py runserver
