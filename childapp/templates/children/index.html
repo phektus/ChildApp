@@ -11,6 +11,7 @@
         <tr>
             <th>Name</th>
             <th>Gender</th>
+            <th></th>
         </tr>
     </thead>
     <tbody>
@@ -18,6 +19,7 @@
     <tr>
         <td>{{ child.first_name }} {{ child.last_name }}</td>
         <td>{{ child.gender }}</td>
+        <th><a href="{% url childapp.apps.children.views.delete id=child.id %}">Delete</a></th>
     </tr>
     {% endfor %}
     </tbody>
