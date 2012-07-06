@@ -10,3 +10,4 @@ south==0.7.3
 django-registration==0.8
 django-activelink==0.3
 dj-database-url==0.2.0
+psycopg2
