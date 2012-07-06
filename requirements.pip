@@ -9,3 +9,4 @@ south==0.7.3
 -e git://github.com/earle/django-bootstrap.git@2433b7df07f04a3a7c2ca5adf2c49f882a53ffa3#egg=bootstrap-dev
 django-registration==0.8
 django-activelink==0.3
+dj-database-url==0.2.0
