@@ -3,6 +3,7 @@
 {% block content %}
 <div class="page-header">
     <h1>Your Children</h1>
+    <br style="clear:both;">
     <a href="{% url childapp.apps.children.views.index %}" class="btn btn-cancel">Back<a/>
     <a href="{% url childapp.apps.children.views.edit id=child.id %}" class="btn btn-primary">Edit</a>
     <br style="clear:both;">
