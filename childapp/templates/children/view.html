@@ -3,7 +3,8 @@
 {% block content %}
 <div class="page-header">
     <h1>Your Children</h1>
-    <a href="{% url childapp.apps.children.views.edit %}" class="btn primary">Add</a>
+    <a href="{% url childapp.apps.children.views.index %}" class="btn btn-cancel">Back<a/>
+    <a href="{% url childapp.apps.children.views.edit id=child.id %}" class="btn btn-primary">Edit</a>
     <br style="clear:both;">
 </div>
 <table class="table table-striped">
