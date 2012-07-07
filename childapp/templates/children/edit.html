@@ -1,17 +1,23 @@
 {% extends 'base.html' %}
 
+
 {% block content %}
-    <div class="page-header">
-        <h1>{% if is_new %}New{% else %}Edit{% endif %} Child</h1>
-        <br style="clear:both;">
-    </div>
-    <form action="" class="form-stacked" method="POST">
-        {% csrf_token %}
-        <fieldset>
-            {{ form }}
-        </fieldset>
-        <input type="submit" class="btn btn-primary" value="Save" />
-        <a href="{% url childapp.apps.children.views.index %}" class="btn btn-cancel">Cancel<a/>
-    </form>
+<link href="/static/admin/css/base.css" rel="stylesheet" type="text/css" media="screen" />
+<script type="text/javascript" src="/admin/jsi18n/"></script>
+<script type="text/javascript" src="/static/admin/js/core.js"></script>
+{{ form.media }}
+
+<div class="page-header">
+    <h1>{% if is_new %}New{% else %}Edit{% endif %} Child</h1>
+    <br style="clear:both;">
+</div>
+<form action="" class="form-stacked" method="POST">
+    {% csrf_token %}
+    <fieldset>
+        {{ form }}
+    </fieldset>
+    <input type="submit" class="btn btn-primary" value="Save" />
+    <a href="{% url childapp.apps.children.views.index %}" class="btn btn-cancel">Cancel<a/>
+</form>
 
 {% endblock %}
