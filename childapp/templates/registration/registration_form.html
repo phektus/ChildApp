@@ -1,10 +1,13 @@
 {% extends "base.html" %}
 
 {% block content %}
-    <h1>Register as a Merchant</h1>
-    <p>The surface is fine and powdery. I can kick it up loosely with my toe. It does adhere in fine layers, like powdered charcoal, to the sole and sides of my boots. </p>
+    <h1>Register as a Parent</h1>
+    <p>You are a few steps away from being a responsible parent. </p>
     <form class="well" method="post">{% csrf_token %}
-        {{ form }}
+        <fieldset>
+            {{ form }}
+        </fieldset>
+        <a href="/" class="btn">Cancel</a>
         <button class="btn btn-primary" type="submit">Register</button>
     </form>
 {% endblock content %}
