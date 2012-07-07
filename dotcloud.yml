@@ -3,3 +3,5 @@ www:
   approot: childapp
 db:
     type: postgresql
+mailer:
+  type: smtp

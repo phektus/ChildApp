@@ -28,3 +28,10 @@ INSTALLED_APPS += (
 MEDIA_ROOT = '/home/dotcloud/code/childapp/static/'
 ADMIN_MEDIA_PREFIX = '/static/admin/'
 MEDIA_URL = '/static/'
+
+EMAIL_HOST = env['DOTCLOUD_MAILER_SMTP_HOST']
+EMAIL_PORT = env['DOTCLOUD_MAILER_SMTP_PORT']
+EMAIL_HOST_USER = env['DOTCLOUD_MAILER_SMTP_LOGIN']
+EMAIL_HOST_PASSWORD = env['DOTCLOUD_MAILER_SMTP_PASSWORD']
+DEFAULT_FROM_MAIL = 'phektus@gmail.com'
+APP_URL = 'http://childapp-hqkpjekb.dotcloud.com/'
