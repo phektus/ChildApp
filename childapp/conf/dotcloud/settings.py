@@ -25,18 +25,15 @@ INSTALLED_APPS += (
     'django.contrib.admindocs',
 )
 
-# static and admin links
-MEDIA_ROOT = '/home/dotcloud/code/childapp/static/'
+# edit settings.py file to the following.
 ADMIN_MEDIA_PREFIX = '/static/admin/'
+# change MEDIA_URL
 MEDIA_URL = '/static/'
 
 # for smtp
-EMAIL_HOST = env['DOTCLOUD_MAILER_SMTP_HOST']
-EMAIL_PORT = env['DOTCLOUD_MAILER_SMTP_PORT']
-EMAIL_HOST_USER = env['DOTCLOUD_MAILER_SMTP_LOGIN']
-EMAIL_HOST_PASSWORD = env['DOTCLOUD_MAILER_SMTP_PASSWORD']
+EMAIL_HOST = 'childapp-HQKPJEKB.dotcloud.com'
+EMAIL_PORT = 31618
+EMAIL_HOST_USER = 'dotcloud'
+EMAIL_HOST_PASSWORD = 'nQtBEurWBWBZ0GvPVdco'
 DEFAULT_FROM_MAIL = 'phektus@gmail.com'
 APP_URL = 'http://childapp-hqkpjekb.dotcloud.com/'
-
-# for django registration
-ACCOUNT_ACTIVATION_DAYS = 7

@@ -88,6 +88,5 @@ INSTALLED_APPS = (
     'activelink',
 )
 
-# for heroku
-import dj_database_url
-DATABASES = {'default': dj_database_url.config(default='postgres://localhost')}
+# for django registration
+ACCOUNT_ACTIVATION_DAYS = 7

@@ -3,7 +3,7 @@ Hello Parent,
 Someone, most likely you, have registered to be a parent to Skoolbo Child App.
 
 In order to complete the registration, please follow this activation link:
-http://simple-sword-8717.herokuapp.com/accounts/activate/{{ activation_key }}
+http://childapp-hqkpjekb.dotcloud.com/accounts/activate/{{ activation_key }}
 
 If this is not you, just ignore this message.
 
