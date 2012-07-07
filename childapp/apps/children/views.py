@@ -3,6 +3,7 @@ from django.shortcuts import render_to_response, redirect
 from django.template import RequestContext
 from django.http import HttpResponse, HttpResponseRedirect
 from django.contrib.auth.decorators import login_required
+from django.http import Http404
 
 from childapp.apps.children.models import Child
 from childapp.apps.children.forms import ChildForm
@@ -18,6 +19,8 @@ def index(request):
 @login_required
 def view(request, id=None):
     child = Child.objects.get(id=int(id))
+    if child.parent != request.user:
+        raise Http404
     c = RequestContext(request, {
         "child": child,
     })
