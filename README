@@ -1,4 +1,5 @@
 Child profile app
+Live demo: http://childapp-hqkpjekb.dotcloud.com/
 
 installing on local:
 * create virtualenv
@@ -7,3 +8,7 @@ installing on local:
 * pip install -e .
 * manage.py syncdb --migrate
 * manage.py runserver
+
+Note: I used the Lincolnloop structure
+https://github.com/lincolnloop/django-startproject/
+http://lincolnloop.com/django-best-practices/
